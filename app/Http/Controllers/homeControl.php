@@ -15,16 +15,35 @@ class homeControl extends Controller
 
     public function redirectFunct()
     {
-        $typeuser = Auth::user()->usertype;
-
-        if($typeuser=='1')
+        if(Auth::id())
         {
-            return view('user.admin.adminpage');
-        }
+            $typeuser = Auth::user()->usertype;
 
+            if($typeuser=='1')
+            {
+                return view('user.admin.adminpage');
+            }
+            else if($typeuser=='2')
+            {
+                return view('user.admin.coorpage');
+            }
+            else if($typeuser=='3')
+            {
+                return view('user.admin.supervisor');
+            }
+            else if($typeuser=='4')
+            {
+                return view('user.admin.studentpage');
+            }
+            else
+            {
+                return view('user.unassigned');
+            }
+
+        }
         else
         {
-            return view('home');
+            return redirect()->back();
         }
     }
 }
