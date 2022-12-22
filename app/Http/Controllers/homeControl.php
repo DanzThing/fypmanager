@@ -43,7 +43,7 @@ class homeControl extends Controller
         }
         else
         {
-            return redirect()->back();
+            return view('home');
         }
     }
 }
