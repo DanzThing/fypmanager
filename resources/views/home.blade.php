@@ -32,7 +32,7 @@
                           @if (Route::has('login'))
                               <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                                   @auth
-                                      <li class="nav-item mx-0 mx-lg-1"><a href="{{ url('/dashboard') }}" class="nav-link py-3 px-0 px-lg-3 rounded">Dashboard</a></li>
+                                      <li class="nav-item mx-0 mx-lg-1"><a href="{{ url('/redirect') }}" class="nav-link py-3 px-0 px-lg-3 rounded">Dashboard</a></li>
                                   @else
                                       <li class="nav-item mx-0 mx-lg-1"><a href="{{ route('login') }}" class="nav-link py-3 px-0 px-lg-3 rounded">Log in</a></li>
 

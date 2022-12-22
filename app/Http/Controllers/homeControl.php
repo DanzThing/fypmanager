@@ -24,7 +24,7 @@ class homeControl extends Controller
 
         else
         {
-            return view('notassigned');
+            return view('home');
         }
     }
 }
