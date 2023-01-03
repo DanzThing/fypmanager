@@ -54,4 +54,11 @@ class adminControl extends Controller
 
       return view('user.admin.update',['disp'=>$data]);
     }
+    
+    public function delete($id)
+    {
+      $data=Student::find($id);
+      $data->delete();
+      return redirect('projectlist');
+    }
 }

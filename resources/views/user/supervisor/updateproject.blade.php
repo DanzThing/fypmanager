@@ -67,26 +67,26 @@
                                 </div>
                                 <div class="form-group col-7">
                                     <label>Examiner 1 Name</label>
-                                    <input type="text" name="examiner1" class="form-control" value="{{$disp['examiner1']}}" read-only>
+                                    <input type="text" name="examiner1" class="form-control" value="{{$disp['examiner1']}}" readonly>
                                 </div>
 
                                 <div class="form-group col-7">
                                     <label>Examiner 2 Name</label>
-                                    <input type="text" name="examiner2" class="form-control" value="{{$disp['examiner2']}}" read-only>
+                                    <input type="text" name="examiner2" class="form-control" value="{{$disp['examiner2']}}" readonly>
                                 </div>
 
                                 <div class="col-5 form-group col-5">
                                     <label>Start Date</label>
-                                    <input type="date" name="startdate" class="form-control" value="{{$disp['startdate']}}" read-only>
+                                    <input type="date" name="startdate" class="form-control" value="{{$disp['startdate']}}" readonly>
                                 </div>
 
                                 <div class="form-group col-5">
                                     <label>End Date</label>
-                                    <input type="date" name="enddate" class="form-control" value="{{$disp['enddate']}}" read-only>
+                                    <input type="date" name="enddate" class="form-control" value="{{$disp['enddate']}}" readonly>
                                 </div>
                                 <div class="form-group col-5">
                                     <label>Duration(Month)</label>
-                                    <input type="int" name="duration" class="form-control" value="{{$disp['duration']}}" read-only>
+                                    <input type="int" name="duration" class="form-control" value="{{$disp['duration']}}" readonly>
                                 </div>
                                
                             

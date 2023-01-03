@@ -55,6 +55,7 @@
                                             <th class="border-top-0">Duration</th>
                                             <th class="border-top-0">Progress</th>
                                             <th class="border-top-0">Status</th>
+                                            <th class="border-top-0">Operation</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -71,6 +72,7 @@
                                             <td class="txt-oflo">{{$x['duration']}} month</td>
                                             <td class="txt-oflo">{{$x['progress']}}</td>
                                             <td class="txt-oflo">{{$x['status']}}</td>
+                                            <td class="txt-oflo"><a href={{'del/'.$x['id']}}>Delete</a></td>
                                             <!-- <td><span class="label label-success label-rounded"></span></td> -->
                                         </tr>
                                         @endforeach

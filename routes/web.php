@@ -38,6 +38,7 @@ Route::get('/logout', function()
     return Redirect::to('/');
 })->name('logout');
 
+Route::get('del/{id}', [adminControl::class,'delete']);
 Route::POST('edita', [adminControl::class, 'update']);
 Route::view('projectform','user.admin.projectform');
 Route::POST('add', [adminControl::class,'addData']);
