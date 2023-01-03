@@ -26,15 +26,7 @@ class homeControl extends Controller
             }
             else if($typeuser=='2')
             {
-                return view('user.admin.coorpage');
-            }
-            else if($typeuser=='3')
-            {
                 return view('user.admin.supervisor');
-            }
-            else if($typeuser=='4')
-            {
-                return view('user.admin.studentpage');
             }
             else
             {
@@ -48,9 +40,34 @@ class homeControl extends Controller
         }
     }
 
-    public function user()
+    /*public function user()
     {
         $data = user::all();
-        return view('user.listdisplay', compact("data"));
-    }
+        return view('admin.adminpage', compact("data"));
+    }*/
+
+   public function create()
+   {
+        $lecturers = User::all();
+        return view('admin.adminpage', compact('lecturers')); 
+   }
+
+   public function store(Request $request)
+   {
+        $project = new Project;
+        $project->title = $request->title;
+        $project->start_date = $request->start_date;
+        $project->end_date = $request->end_date;
+        $project->duration = $request->duration;
+        $project->milestone_1 = $request->milestone_1;
+        $project->milestone_2 = $request->milestone_2;
+        $project->final_report = $request->final_report;
+        $project->status = $request->status;
+        $project->student_id = $request->student_id;
+        $project->supervisor_id = $request->supervisor_id;
+        $project->examiner_1_id = $request->examiner_1_id;
+        $project->examiner_2_id = $request->examiner_2_id;
+        $project->save();
+        return redirect()->route('projects.index');
+   }
 }

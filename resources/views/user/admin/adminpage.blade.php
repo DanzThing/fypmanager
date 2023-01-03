@@ -385,7 +385,67 @@
                     </div>
 
                     <div class='row'>
-                        @include('user.listdisplay')
+                        <form action="{{ route('projects.store') }}" method="POST">
+                        @csrf
+                        <label for="title">Title</label>
+                        <input type="text" name="title" required>
+                        <br>
+                        <label for="start_date">Start Date</label>
+                        <input type="date" name="start_date" required>
+                        <br>
+                        <label for="end_date">End Date</label>
+                        <input type="date" name="end_date" required>
+                        <br>
+                        <label for="duration">Duration (in months)</label>
+                        <input type="number" name="duration" required>
+                        <br>
+                        <label for="milestone_1">Milestone 1</label>
+                        <input type="text" name="milestone_1" required>
+                        <br>
+                        <label for="milestone_2">Milestone 2</label>
+                        <input type="text" name="milestone_2" required>
+                        <br>
+                        <label for="final_report">Final Report</label>
+                        <input type="text" name="final_report" required>
+                        <br>
+                        <label for="status">Status</label>
+                        <select name="status" required>
+                            <option value="On track">On track</option>
+                            <option value="Delayed">Delayed</option>
+                            <option value="Extended">Extended</option>
+                            <option value="Completed">Completed</option>
+                        </select>
+                        <br>
+                        <label for="student_id">Student</label>
+                        <select name="student_id" required>
+                            @foreach ($students as $student)
+                            <option value="{{ $student->id }}">{{ $student->name }}</option>
+                            @endforeach
+                        </select>
+                        <br>
+                        <label for="supervisor_id">Supervisor</label>
+                        <select name="supervisor_id" required>
+                            @foreach ($lecturers as $lecturer)
+                            <option value="{{ $lecturer->id }}">{{ $lecturer->name }}</option>
+                            @endforeach
+                        </select>
+                        <br>
+                        <label for="examiner_1_id">Examiner 1</label>
+                        <select name="examiner_1_id" required>
+                            @foreach ($lecturers as $lecturer)
+                            <option value="{{ $lecturer->id }}">{{ $lecturer->name }}</option>
+                            @endforeach
+                        </select>
+                        <br>
+                        <label for="examiner_2_id">Examiner 2</label>
+                        <select name="examiner_2_id" required>
+                            @foreach ($lecturers as $lecturer)
+                            <option value="{{ $lecturer->id }}">{{ $lecturer->name }}</option>
+                            @endforeach
+                        </select>
+                        <br>
+                        <button type="submit">Create Project</button>
+                        </form>
                     </div>
                 <!-- /.container-fluid -->
 
