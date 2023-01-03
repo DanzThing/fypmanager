@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\homeControl;
+use App\Http\Controllers\adminControl;
+use App\Http\Controllers\svControl;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -35,3 +37,13 @@ Route::get('/logout', function()
 
     return Redirect::to('/');
 })->name('logout');
+
+Route::POST('edita', [adminControl::class, 'update']);
+Route::view('projectform','user.admin.projectform');
+Route::POST('add', [adminControl::class,'addData']);
+Route::get("projectlist",[adminControl::class,'show']);
+Route::get("upda/{id}",[adminControl::class,'showStud']);
+
+Route::get("svprojectlist",[svControl::class,'show']);
+Route::get("upd/{id}",[svControl::class,'showStud']);
+Route::POST("edit",[svControl::class,'update']);
