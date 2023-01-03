@@ -385,7 +385,7 @@
                     </div>
 
                     <div class='row'>
-
+                        @include('user.listdisplay')
                     </div>
                 <!-- /.container-fluid -->
 

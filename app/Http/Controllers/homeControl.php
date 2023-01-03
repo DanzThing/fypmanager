@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 
 class homeControl extends Controller
 {
@@ -45,5 +46,11 @@ class homeControl extends Controller
         {
             return view('home');
         }
+    }
+
+    public function user()
+    {
+        $data = user::all();
+        return view('user.listdisplay', compact("data"));
     }
 }
