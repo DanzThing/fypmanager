@@ -52,7 +52,7 @@
 
                             <div class="form-group col-7">
                                     <label>Project Title</label>
-                                    <input type="text" name="title" class="form-control" value="{{$disp['title']}}" required>
+                                    <input type="text" name="title" class="form-control" value="{{$disp['title']}}">
                                 </div>
                                 <div class="form-group col-5">
                                     <label>Student Name</label>
@@ -60,7 +60,7 @@
                                 </div>
                                 <div class="form-group col-5">
                                     <label>Supervisor Name</label>
-                                    <input type="text" name="supervisor" class="form-control" value="{{$disp['supervisor']}}" required>
+                                    <input type="text" name="supervisor" class="form-control" value="{{$disp['supervisor']}}">
                                 </div>
                                 <div class="form-group col-5">
                                     <label>Examiner 1 Name</label>

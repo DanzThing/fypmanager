@@ -78,6 +78,12 @@
                                         @endforeach
                                     </tbody>
                                 </table>
+                                <span>{{$list->links()}}</span>
+                                <style>
+                                    .w-5{
+                                        display:none
+                                    }
+                                </style>
                             </div>
                         </div>
                     </div>

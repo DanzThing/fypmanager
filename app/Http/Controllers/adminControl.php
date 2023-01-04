@@ -9,7 +9,7 @@ class adminControl extends Controller
 {
     public function show()
     {
-      $output = Student::all(); 
+      $output = Student::paginate(5); 
       return view ('user.admin.projectlist', ['list'=>$output]);
     }
 

@@ -54,7 +54,7 @@
 
                                 <div class="form-group col-7">
                                         <label>Project Title</label>
-                                        <input type="text" name="title" class="form-control" required>
+                                        <input type="text" name="title" class="form-control">
                                     </div>
                                     <div class="form-group col-7">
                                         <label>Student Name</label>
@@ -62,7 +62,7 @@
                                     </div>
                                     <div class="form-group col-7">
                                         <label>Supervisor Name</label>
-                                        <input type="text" name="supervisor" class="form-control" required>
+                                        <input type="text" name="supervisor" class="form-control">
                                     </div>
                                     <div class="form-group col-7">
                                         <label>Examiner 1 Name</label>

@@ -9,7 +9,7 @@ class svControl extends Controller
 {
     public function show()
     {
-      $output = Student::all(); 
+      $output = Student::paginate(5); 
       return view ('user.supervisor.projectlist', ['list'=>$output]);
     }
 
