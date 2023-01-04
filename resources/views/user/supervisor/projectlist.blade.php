@@ -45,7 +45,7 @@
                                     <thead>
                                         <tr>
                                             <th class="border-top-0">Title</th>
-                                            <th class="border-top-0">Project Type</th>
+                                            
                                             <th class="border-top-0">Student</th>
                                             <th class="border-top-0">Supervisor</th>
                                             <th class="border-top-0">Examiner</th>
@@ -61,7 +61,7 @@
                                         @foreach($list as $x)
                                         <tr>
                                             <td class="txt-oflo"><a href={{"upd/".$x['id']}}>{{$x['title']}}</a></td>
-                                            <td class="txt-oflo">{{$x['projecttype']}}</td>
+                                            
                                             <td class="txt-oflo">{{$x['student']}}</td>
                                             <td class="txt-oflo">{{$x['supervisor']}}</td>
                                             <td class="txt-oflo">{{$x['examiner1']}}</td>
